@@ -1,25 +1,6 @@
 import mysql.connector as sqlbdd
 import random
 from datetime import datetime
-from tkinter import *
-
-window = Tk()
-window.title("Générateur de binome")
-window.geometry("1080x720")
-window.iconbitmap()
-window.config(background="#3CCFFF")
-
-frame = Frame(window, bg="#3CCFFF")
-
-width = 512
-height = 512
-
-image = PhotoImage().zoom(20).subsample(32)
-canvas = Canvas(frame, width=width, height=height, bg="#3CCFFF", bd=0, highlightthickness=0)
-canvas.create_image(width/2, height/2, image=image)
-canvas.grid(row=0, column=0, sticky=W)
-
-right_frame = Frame(frame, bg=("#3CCFFF"))
 
 
 mybdd = sqlbdd.connect(
